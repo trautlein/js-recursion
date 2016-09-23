@@ -8,6 +8,6 @@ function sumDigits1(n) {
   }
 }
 
-// there exists a bigger way to 
+// there is a "cooler" way to do this, with % and /
 
 console.log(sumDigits2(13));
