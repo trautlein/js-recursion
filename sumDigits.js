@@ -1,12 +1,13 @@
-function sumDigits(n) {
-  if (n.toString().length === 1) {
+function sumDigits1(n) {
+  if (n < 10) {
     return n % 10;
   } else {
-    var numDigits = n.toString().length;
-    return Math.floor(n / Math.pow(10, numDigits - 1)) + sumDigits(n - 1);
-
+    var leftMost = parseInt(n.toString().slice(0,1));
+    var restRight = parseInt(n.toString().slice(1));
+    return leftMost + sumDigits1(restRight);
   }
 }
 
+// there exists a bigger way to 
 
-console.log(sumDigits());
+console.log(sumDigits2(13));
